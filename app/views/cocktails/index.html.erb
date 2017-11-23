@@ -1,0 +1,15 @@
+
+ <div class="container">
+    <div class="text-center">
+    <h1>Cocktail Paradise</h1>
+    <%= link_to "Nouveau Cocktail", new_cocktail_path(@cocktails), class: "btn btn-primary"%>
+  </div>
+    <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card col-xs-4 text-center">
+        <h2><%= cocktail.name %></h2>
+        <%= link_to "Details du cocktail", cocktail_path(cocktail), class: "btn btn-primary", method: :get %>
+      </div>
+    <% end %>
+  </div>
+</div>
